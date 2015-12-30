@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div> 
+                <ul class="nav navbar-nav">
+                    @Html.ActionLink("Welcome to Blog", "Default", "Account", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Write A Post", "Write_post", "Home", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Search For Blogs", "Search", "Home", null, new { @class = "navbar-brand" })
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                   @if (@User != null)
+                   { 
+                      @Html.ActionLink("Logout "+User.FirstName, "LogOut", "Account", null, new { @class = "navbar-brand" })
+                   }
+                   else
+                    {
+                        @Html.ActionLink("Login", "LogOut", "Account", null, new { @class = "navbar-brand" })
+                    } 
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+</body>
+</html>

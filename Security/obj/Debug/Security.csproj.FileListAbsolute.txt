@@ -1,0 +1,163 @@
+F:\Security\Security\bin\Security.dll
+F:\Security\Security\bin\Security.pdb
+F:\Security\Security\bin\Antlr3.Runtime.dll
+F:\Security\Security\bin\EntityFramework.dll
+F:\Security\Security\bin\Microsoft.Web.Infrastructure.dll
+F:\Security\Security\bin\Newtonsoft.Json.dll
+F:\Security\Security\bin\System.Net.Http.Formatting.dll
+F:\Security\Security\bin\System.Web.Http.dll
+F:\Security\Security\bin\System.Web.Http.WebHost.dll
+F:\Security\Security\bin\System.Web.Mvc.dll
+F:\Security\Security\bin\System.Web.Optimization.dll
+F:\Security\Security\bin\System.Web.Providers.dll
+F:\Security\Security\bin\System.Web.Razor.dll
+F:\Security\Security\bin\System.Web.WebPages.Deployment.dll
+F:\Security\Security\bin\System.Web.WebPages.dll
+F:\Security\Security\bin\System.Web.WebPages.Razor.dll
+F:\Security\Security\bin\WebGrease.dll
+F:\Security\Security\bin\EntityFramework.xml
+F:\Security\Security\bin\Newtonsoft.Json.xml
+F:\Security\Security\bin\System.Net.Http.Formatting.xml
+F:\Security\Security\bin\System.Web.Http.xml
+F:\Security\Security\bin\System.Web.Http.WebHost.xml
+F:\Security\Security\bin\System.Web.Mvc.xml
+F:\Security\Security\bin\System.Web.Razor.xml
+F:\Security\Security\bin\System.Web.WebPages.xml
+F:\Security\Security\bin\System.Web.WebPages.Deployment.xml
+F:\Security\Security\bin\System.Web.WebPages.Razor.xml
+F:\Security\Security\obj\Debug\Security.csprojResolveAssemblyReference.cache
+F:\Security\Security\obj\Debug\Security.dll
+F:\Security\Security\obj\Debug\Security.pdb
+F:\Security\Security\obj\Debug\Security.Migrations.initial.resources
+F:\Security\Security\obj\Debug\Security.csproj.GenerateResource.Cache
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\Security.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\Security.pdb
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\Antlr3.Runtime.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\EntityFramework.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\Microsoft.Web.Infrastructure.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\Newtonsoft.Json.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Net.Http.Formatting.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Http.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Http.WebHost.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Mvc.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Optimization.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Providers.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Razor.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.WebPages.Deployment.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.WebPages.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.WebPages.Razor.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\WebGrease.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\EntityFramework.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\Newtonsoft.Json.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Net.Http.Formatting.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Http.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Http.WebHost.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Mvc.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.Razor.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.WebPages.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.WebPages.Deployment.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\bin\System.Web.WebPages.Razor.xml
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\obj\Debug\Security.csprojResolveAssemblyReference.cache
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\obj\Debug\Security.Migrations.initial.resources
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\obj\Debug\Security.csproj.GenerateResource.Cache
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\obj\Debug\Security.dll
+F:\Asp.Net MVC Training\Asp.NET MVC Advance\Security-Role-UserBased\Security\obj\Debug\Security.pdb
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\Security.dll.config
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\Security.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\Security.pdb
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\Antlr3.Runtime.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\EntityFramework.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\Newtonsoft.Json.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Net.Http.Formatting.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Http.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Http.WebHost.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Mvc.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Optimization.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Providers.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Razor.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.WebPages.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.WebPages.Razor.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\WebGrease.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\EntityFramework.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\Newtonsoft.Json.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Net.Http.Formatting.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Http.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Http.WebHost.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Mvc.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.Razor.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.WebPages.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\bin\System.Web.WebPages.Razor.xml
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\obj\Debug\Security.csprojResolveAssemblyReference.cache
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\obj\Debug\Security.Migrations.initial.resources
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\obj\Debug\Security.csproj.GenerateResource.Cache
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\obj\Debug\Security.dll
+C:\Users\ubics\Downloads\Security-Role-UserBased\Security\obj\Debug\Security.pdb
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\Security.dll.config
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\Security.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\Security.pdb
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\Antlr3.Runtime.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\EntityFramework.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\Newtonsoft.Json.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Net.Http.Formatting.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Http.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Http.WebHost.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Mvc.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Optimization.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Providers.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Razor.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.WebPages.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.WebPages.Razor.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\WebGrease.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\EntityFramework.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\Newtonsoft.Json.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Net.Http.Formatting.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Http.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Http.WebHost.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Mvc.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.Razor.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.WebPages.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\bin\System.Web.WebPages.Razor.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\obj\Debug\Security.csprojResolveAssemblyReference.cache
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\obj\Debug\Security.Migrations.initial.resources
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\obj\Debug\Security.csproj.GenerateResource.Cache
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\obj\Debug\Security.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\Security-Role-UserBased\Security\obj\Debug\Security.pdb
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\Security.dll.config
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\Security.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\Security.pdb
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\Antlr3.Runtime.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\EntityFramework.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\Newtonsoft.Json.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Net.Http.Formatting.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Http.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Http.WebHost.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Mvc.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Optimization.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Providers.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Razor.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.WebPages.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.WebPages.Razor.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\WebGrease.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\EntityFramework.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\Newtonsoft.Json.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Net.Http.Formatting.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Http.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Http.WebHost.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Mvc.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.Razor.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.WebPages.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\System.Web.WebPages.Razor.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\Security.csprojResolveAssemblyReference.cache
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\Security.Migrations.initial.resources
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\Security.csproj.GenerateResource.Cache
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\Security.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\Security.pdb
