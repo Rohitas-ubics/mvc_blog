@@ -1,0 +1,47 @@
+﻿@model Security.Blog
+
+@{
+    ViewBag.Title = "Write_post";
+}
+
+<h2>Write_post</h2>
+
+@using (Html.BeginForm("Write_post", "Home",FormMethod.Post , null))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Blogs</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Contents)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Contents)
+            @Html.ValidationMessageFor(model => model.Contents)
+        </div>         
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.Author_id, new { @Value = @User.UserId })                                
+        </div>         
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.is_active, new { @Value = false })                                       
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

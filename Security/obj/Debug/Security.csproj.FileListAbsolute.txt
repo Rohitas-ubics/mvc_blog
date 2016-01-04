@@ -161,3 +161,7 @@ C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\
 C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\Security.csproj.GenerateResource.Cache
 C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\Security.dll
 C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\obj\Debug\Security.pdb
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\PagedList.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\PagedList.Mvc.dll
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\PagedList.xml
+C:\Users\ubics\Documents\Visual Studio 2013\Projects\BLOGGER\Security\bin\PagedList.Mvc.xml

@@ -1,0 +1,99 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<Security.Blog>
+@*model IEnumerable<Security.Blog>*@
+
+@{
+    ViewBag.Title = "Approve_post";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script type="text/javascript">
+    function Submit_via_ajax(Blog_ID)
+    {
+        
+        $.ajax({
+            url: "/Admin/Approve_post_id",
+            contentType: "application/x-www-form-urlencoded",
+            type: "POST",
+            datatype: "json",
+            data: { Blog_id: Blog_ID },
+            error: function (xmlHttpRequest, errorText, thrownError) {
+                alert(xmlHttpRequest + "|" + errorText + "|" + thrownError);
+            },
+            success: function (data) {
+                if (data != null) {
+                    location.reload();
+                }
+            }
+        }); 
+      
+    }
+</script>
+<script type="text/javascript">
+    function submit_all() {      
+            $("#log").html($("input:checked").val() + " is checked!");        
+    }
+</script>
+<h2>Approve post</h2>
+ 
+<table align="center" class="table table-hover">
+    <tr>
+        <th>             
+            @Html.DisplayNameFor(model => model.First().Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Contents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Author_id)
+        </th>
+        <th>
+            @Html.Raw("Approve") 
+        </th>
+        <th>
+            @Html.Raw("Actions")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.FirstName)
+            </td>
+            <td>
+                @Html.EditorFor(modelItem => item.is_active,item.Id)
+            </td>
+            <td>
+                <button type="button"  value="@item.Id" class="btn btn-warning">
+                    Review
+                </button>
+                <button type="button" onclick="Submit_via_ajax(this.value)" value="@item.Id" class="btn btn-success">
+                    Approve
+                </button>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div id="log"></div>
+
+<div align="right">
+    <button type="button" onclick="submit_all()" class="btn btn-success">
+        Approve Selected
+    </button>
+</div>
+<br/>
+
+@*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount*@
+@Html.PagedListPager(Model, page => Url.Action("Approve_post", new { page }))
+ 

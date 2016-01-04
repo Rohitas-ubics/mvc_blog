@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿ <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -10,24 +10,35 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
 </head>
-<body>    
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
-            </div>
-            <div>                                     
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div>
                 <ul class="nav navbar-nav">
-                    @Html.ActionLink("Admin Dashboard", "Index", "Admin", null, new { @class = "navbar-brand" })
-                </ul>                                      
+                    @Html.ActionLink("Welcome Admin", "Index", "Admin", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Approve A Post", "Approve_post", "Admin", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Some admin stuffs", "Search", "Admin", null, new { @class = "navbar-brand" })
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    @Html.ActionLink("Logout", "LogOut", "Account", null, new { @class = "navbar-brand" })
+                    @if (@User != null)
+                    {
+                        @Html.ActionLink("Logout " + User.FirstName, "LogOut", "Account", null, new { @class = "navbar-brand" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Login", "LogOut", "Account", null, new { @class = "navbar-brand" })
+                    }
                 </ul>
             </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div>
         </div>
-    </nav>
-    <div class="container">
+    </div>
+
+    <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
