@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mvc_blog_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Blog_Tag">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="blog_id" Type="Int32" Nullable="false" />
+    <Property Name="tag_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Blog" Relationship="Self.FK_Blog_Tag_Blogs" FromRole="Blog_Tag" ToRole="Blogs" />
+    <NavigationProperty Name="Tag_master" Relationship="Self.FK_Blog_Tag_Tag_master" FromRole="Blog_Tag" ToRole="Tag_master" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contents" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Author_id" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Blog_Tag" Relationship="Self.FK_Blog_Tag_Blogs" FromRole="Blogs" ToRole="Blog_Tag" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Blogs_Users" FromRole="Blogs" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserRoles" Relationship="Self.FK_UserRoles_Roles" FromRole="Roles" ToRole="UserRoles" />
+  </EntityType>
+  <EntityType Name="Tag_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tag_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Blog_Tag" Relationship="Self.FK_Blog_Tag_Tag_master" FromRole="Tag_master" ToRole="Blog_Tag" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_UserRoles_Roles" FromRole="UserRoles" ToRole="Roles" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserRoles_Users" FromRole="UserRoles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Blogs" Relationship="Self.FK_Blogs_Users" FromRole="Users" ToRole="Blogs" />
+    <NavigationProperty Name="UserRoles" Relationship="Self.FK_UserRoles_Users" FromRole="Users" ToRole="UserRoles" />
+  </EntityType>
+  <Association Name="FK_Blog_Tag_Blogs">
+    <End Role="Blogs" Type="Self.Blog" Multiplicity="1" />
+    <End Role="Blog_Tag" Type="Self.Blog_Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blogs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Blog_Tag">
+        <PropertyRef Name="blog_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Blog_Tag_Tag_master">
+    <End Role="Tag_master" Type="Self.Tag_master" Multiplicity="1" />
+    <End Role="Blog_Tag" Type="Self.Blog_Tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag_master">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Blog_Tag">
+        <PropertyRef Name="tag_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Blogs_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Blogs" Type="Self.Blog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Blogs">
+        <PropertyRef Name="Author_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Roles">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="UserRoles" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="UserRoles" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mvc_blog_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Blog_Tag" EntityType="Self.Blog_Tag" />
+    <EntitySet Name="Blogs" EntityType="Self.Blog" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Tag_master" EntityType="Self.Tag_master" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Blog_Tag_Blogs" Association="Self.FK_Blog_Tag_Blogs">
+      <End Role="Blogs" EntitySet="Blogs" />
+      <End Role="Blog_Tag" EntitySet="Blog_Tag" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Blog_Tag_Tag_master" Association="Self.FK_Blog_Tag_Tag_master">
+      <End Role="Tag_master" EntitySet="Tag_master" />
+      <End Role="Blog_Tag" EntitySet="Blog_Tag" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Blogs_Users" Association="Self.FK_Blogs_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Blogs" EntitySet="Blogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Roles" Association="Self.FK_UserRoles_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Users" Association="Self.FK_UserRoles_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mvc_blog_dbModelStoreContainer" CdmEntityContainer="mvc_blog_dbEntities">
+    <EntitySetMapping Name="Blog_Tag">
+      <EntityTypeMapping TypeName="mvc_blog_dbModel.Blog_Tag">
+        <MappingFragment StoreEntitySet="Blog_Tag">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="blog_id" ColumnName="blog_id" />
+          <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="mvc_blog_dbModel.Blog">
+        <MappingFragment StoreEntitySet="Blogs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Author_id" ColumnName="Author_id" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="mvc_blog_dbModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tag_master">
+      <EntityTypeMapping TypeName="mvc_blog_dbModel.Tag_master">
+        <MappingFragment StoreEntitySet="Tag_master">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="mvc_blog_dbModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="mvc_blog_dbModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
