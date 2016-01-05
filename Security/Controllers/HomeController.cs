@@ -54,22 +54,25 @@ namespace Security.Controllers
                 {
                     Tag_master tag_master_item = new Tag_master();
                     tag_master_item = db.Tag_master.Where(x=>x.tag_name.Equals(tag)).FirstOrDefault();
-                    if (tag_master_item.tag_name.Equals(tag))   //tag already present .. so driectly map to blog_tag
+                    if (tag_master_item != null)   //tag already present .. so driectly map to blog_tag
                     {
                         Blog_Tag blog_tag_item = new Blog_Tag();
                         blog_tag_item.blog_id = Last_insert_blog_id;
                         blog_tag_item.tag_id = tag_master_item.id;
+                        db.Blog_Tag.Add(blog_tag_item);
+                        db.SaveChanges();
                     }
-                    else    // new tag  ... so add tag first and then save to blog_tag
+                    else if (tag != "")    // new tag(not empty)  ... so add tag first and then save to blog_tag                    
                     {
                         Tag_master current_tm = new Tag_master();
                         current_tm.tag_name = tag;
                         db.Tag_master.Add(current_tm);
                         db.SaveChanges();
- 
+
                         Blog_Tag blog_tag_item = new Blog_Tag();
                         blog_tag_item.blog_id = Last_insert_blog_id;
-                        blog_tag_item.tag_id =current_tm.id;
+                        blog_tag_item.tag_id = current_tm.id;
+                        db.Blog_Tag.Add(blog_tag_item);
                         db.SaveChanges();
                     } 
                 } 

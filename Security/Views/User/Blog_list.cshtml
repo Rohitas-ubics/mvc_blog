@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Security.Blog>
+
+@{
+    ViewBag.Title = "Blog_list";
+}
+
+<h2>Blog_list</h2>
+ 
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.Raw("Status")
+        </th>
+        <th>
+            @Html.Raw("Action")
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td > 
+                @Html.DisplayFor(modelItem => item.is_active)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

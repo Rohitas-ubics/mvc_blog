@@ -19,8 +19,9 @@
             <div> 
                 <ul class="nav navbar-nav">
                     @Html.ActionLink("Welcome to Blog", "Default", "Account", null, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Write A Post", "Write_post", "Home", null, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Search For Blogs", "Search", "Home", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Write A Post", "Write_post", "Home", null, new { @class = "navbar-brand" })                                        
+                    @Html.ActionLink("Search For Blogs", "Search", "Home", null, new { @class = "navbar-brand" })                                         
+                    @Html.ActionLink("Edit a Blog", "Blog_list", "User", null, new { @class = "navbar-brand" })
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                    @if (@User != null)
