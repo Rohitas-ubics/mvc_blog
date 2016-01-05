@@ -11,6 +11,7 @@ namespace Security
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     
     public partial class Blog
     {
@@ -20,8 +21,10 @@ namespace Security
         }
     
         public int Id { get; set; }
+        [DisplayName("Title")]
         public string Name { get; set; }
         public string Contents { get; set; }
+        [DisplayName("Author")]
         public int Author_id { get; set; }
         public bool is_active { get; set; }
     

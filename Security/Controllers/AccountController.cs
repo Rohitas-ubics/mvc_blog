@@ -16,7 +16,8 @@ namespace Security.Controllers
     {
         DataContext Context = new DataContext();
         //
-        // GET: /Account/
+        mvc_blog_dbEntities db = new mvc_blog_dbEntities();
+        //
         public ActionResult Index()
         {
             return View();
@@ -57,7 +58,7 @@ namespace Security.Controllers
                     }
                     else if (roles.Contains("User"))
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Write_post", "Home");
                     }
                     else
                     {
@@ -81,7 +82,13 @@ namespace Security.Controllers
         [AllowAnonymous]
         public ActionResult Default()
         {
-            return View();
+            return View(db.Blogs.Where(i=>i.is_active == true).ToList());
+        }
+
+        [AllowAnonymous]
+        public ActionResult Details(Int32 id)
+        {           
+            return View(db.Blogs.Find(id));
         }
     }
 }

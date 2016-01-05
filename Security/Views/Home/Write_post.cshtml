@@ -6,14 +6,47 @@
 
 <h2>Write_post</h2>
 
+<link href="../css/jquery.tagit.css" rel="stylesheet" type="text/css">
+<link href="../css/tagit.ui-zendesk.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
+<!-- The real deal -->
+<script src="../js/tag-it.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(function () {
+        var sampleTags = ['c++', 'java', 'php', 'coldfusion', 'javascript', 'asp', 'ruby', 'python', 'c', 'scala', 'groovy', 'haskell', 'perl', 'erlang', 'apl', 'cobol', 'go', 'lua'];
+
+        //-------------------------------
+        // Minimal
+        //-------------------------------
+        $('#myTags').tagit();
+
+        //-------------------------------
+        // Single field
+        //-------------------------------
+        $('#singleFieldTags').tagit({
+            availableTags: sampleTags,
+            // This will make Tag-it submit a single form value, as a comma-delimited field.
+            singleField: true,
+            singleFieldNode: $('#mySingleField')
+        });
+
+    });
+</script>
+
+
 @using (Html.BeginForm("Write_post", "Home",FormMethod.Post , null))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+{   
+    @Html.ValidationSummary(true) 
 
     <fieldset>
         <legend>Blogs</legend>
-
+        <div class="editor-label">
+            @Html.Label("Tags")
+        </div>
+        <p>             
+            <input type="hidden" name="tags" id="mySingleField" value="Apple, Orange">
+        </p>
+        <ul id="singleFieldTags"></ul>         
         <div class="editor-label">
             @Html.LabelFor(model => model.Name)
         </div>
@@ -25,8 +58,8 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.Contents)
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Contents)
+        <div class="editor-field">               
+            @Html.Raw(ViewBag.Editor)             
             @Html.ValidationMessageFor(model => model.Contents)
         </div>         
         <div class="editor-field">
@@ -40,8 +73,4 @@
             <input type="submit" value="Create" />
         </p>
     </fieldset>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+} 

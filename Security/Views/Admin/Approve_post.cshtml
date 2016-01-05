@@ -22,8 +22,8 @@
                 alert(xmlHttpRequest + "|" + errorText + "|" + thrownError);
             },
             success: function (data) {
-                if (data != null) {
-                    location.reload();
+                if (data != null) {                                         
+                    window.location.href = window.location.href;
                 }
             }
         }); 
@@ -31,8 +31,16 @@
     }
 </script>
 <script type="text/javascript">
-    function submit_all() {      
-            $("#log").html($("input:checked").val() + " is checked!");        
+    function submit_all() {
+        var all_ids= ($("input[name=mass_select]:checked").map(
+            function () {
+                return this.value;
+            }).get().join(","));
+       
+        var ID_array = all_ids.split(",");
+        jQuery.each(ID_array, function (index, item) {
+            Submit_via_ajax(item);
+        });
     }
 </script>
 <h2>Approve post</h2>
@@ -70,7 +78,7 @@
                 @Html.DisplayFor(modelItem => item.User.FirstName)
             </td>
             <td>
-                @Html.EditorFor(modelItem => item.is_active,item.Id)
+                @Html.CheckBox("mass_select", new {@Value= item.Id })
             </td>
             <td>
                 <button type="button"  value="@item.Id" class="btn btn-warning">

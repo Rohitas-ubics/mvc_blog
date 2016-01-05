@@ -1,4 +1,5 @@
-﻿using Security.DAL.Security;
+﻿using RTE;
+using Security.DAL.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,28 +22,58 @@ namespace Security.Controllers
         [CustomAuthorize(Roles = "User")]
         public ActionResult Write_post()
         {
+            Editor Editor1 = new Editor(System.Web.HttpContext.Current, "Editor1");
+            Editor1.LoadFormData("");
+            Editor1.MvcInit();
+            Editor1.Toolbar = "minimal";
+            Editor1.ID = "Editor_id";
+            Editor1.Name = "Editor_name";
+            ViewBag.Editor = Editor1.MvcGetString(); 
             return View();
         }
 
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Write_post(Blog current)
+        [HttpPost , ValidateInput(false)]        
+        public ActionResult Write_post(Blog current ,FormCollection form1)
         {             
             if (ModelState.IsValid)
             {
-                Blog test_blog = new Blog();
-                test_blog.Name = current.Name;
-                test_blog.Id = current.Id;
-                test_blog.is_active = current.is_active;
-                test_blog.Author_id = current.Author_id;
-                test_blog.Blog_Tag = current.Blog_Tag;
-                test_blog.Contents = current.Contents;                 
- 
+
+                var key = "Editor_name";
+                var blog_text = form1[key].ToString();
+                current.Contents = blog_text;
                 db.Blogs.Add(current);
                 db.SaveChanges();
 
-                return RedirectToAction("Write_post");
+                var Last_insert_blog_id = current.Id;
+
+                key = "tags";
+                var blog_tags =  form1[key].ToString().ToLower();
+                string[] blog_tag_array = blog_tags.Split(',');
+                foreach (string tag in blog_tag_array)
+                {
+                    Tag_master tag_master_item = new Tag_master();
+                    tag_master_item = db.Tag_master.Where(x=>x.tag_name.Equals(tag)).FirstOrDefault();
+                    if (tag_master_item.tag_name.Equals(tag))   //tag already present .. so driectly map to blog_tag
+                    {
+                        Blog_Tag blog_tag_item = new Blog_Tag();
+                        blog_tag_item.blog_id = Last_insert_blog_id;
+                        blog_tag_item.tag_id = tag_master_item.id;
+                    }
+                    else    // new tag  ... so add tag first and then save to blog_tag
+                    {
+                        Tag_master current_tm = new Tag_master();
+                        current_tm.tag_name = tag;
+                        db.Tag_master.Add(current_tm);
+                        db.SaveChanges();
+ 
+                        Blog_Tag blog_tag_item = new Blog_Tag();
+                        blog_tag_item.blog_id = Last_insert_blog_id;
+                        blog_tag_item.tag_id =current_tm.id;
+                        db.SaveChanges();
+                    } 
+                } 
+               return RedirectToAction("Write_post");
             }
             else
             {                              

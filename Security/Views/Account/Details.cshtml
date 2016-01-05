@@ -1,0 +1,41 @@
+﻿@model Security.Blog
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+<div align="center">
+    <fieldset>
+        <legend>Blog</legend>
+
+        <div class="display-field">
+            @Html.DisplayNameFor(model => model.Name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Contents)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Contents)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Author_id)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.User.FirstName)
+        </div>
+
+    </fieldset>
+</div>
+    <p>
+        @Html.Label("Comments")
+        @Html.TextArea("Comments", new { @style = " background-color:#87E7E4;" })
+        <br />
+        @Html.ActionLink("Submit ", null, null, new { @class = "btn btn-info" })
+    </p>
