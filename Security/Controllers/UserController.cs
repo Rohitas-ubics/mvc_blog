@@ -22,12 +22,31 @@ namespace Security.Controllers
 
         public ActionResult Blog_list()
         {             
-            return View(db.Blogs.Where(x=>x.Author_id.Equals(User.UserId)).ToList());
+            return View();
+        }
+        public PartialViewResult partial_Blog_list()
+        {             
+            return  PartialView(db.Blogs.Where(x=>x.Author_id.Equals(User.UserId)).ToList());
         }
 
         public ActionResult Edit(Int32 id)
         {
             return View(db.Blogs.Find(id));
+        }
+
+        public string Delete_blog(Int32 Blog_id)
+        {
+            List<Blog_Tag> list_bt = db.Blog_Tag.Where(x=>x.blog_id.Equals(Blog_id)).ToList();
+            foreach(var blog_tag_item in list_bt)
+            { 
+                db.Blog_Tag.Remove(blog_tag_item);
+                db.SaveChanges();                      // removing child enitity
+            }
+
+            Blog current_blog = db.Blogs.Where(x=>x.Id.Equals(Blog_id)).First();
+            db.Blogs.Remove(current_blog);
+            db.SaveChanges();
+            return "abc";
         }
     }
 }

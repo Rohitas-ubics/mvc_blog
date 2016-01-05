@@ -1,38 +1,39 @@
-﻿@model IEnumerable<Security.Blog>
-
-@{
-    ViewBag.Title = "Blog_list";
-}
+﻿@using Security
+@model IEnumerable<Blog>           
+@{mvc_blog_dbEntities db = new mvc_blog_dbEntities();}
 
 <h2>Blog_list</h2>
- 
-<table class="table table-hover">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.Raw("Status")
-        </th>
-        <th>
-            @Html.Raw("Action")
-        </th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td > 
-                @Html.DisplayFor(modelItem => item.is_active)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-    }
-
-</table>
+<script type="text/javascript">
+    function Delete_blog(Blog_ID)
+     {
+         if (confirm("Are You sure You want to delete this blog "))
+         {             
+             $.ajax({
+                 url: "../User/Delete_blog",
+                 contentType: "application/x-www-form-urlencoded",
+                 type: "POST",
+                 datatype: "json",
+                 data: { Blog_id: Blog_ID },
+                 error: function (xmlHttpRequest, errorText, thrownError) {
+                     alert(xmlHttpRequest + "|" + errorText + "|" + thrownError);
+                 },
+                 success: function (data) {
+                     if (data != null)
+                     {
+                         $("#first_pv").hide();
+                         $('#user_content').load('../User/partial_Blog_list');
+                         //render the partial view
+                     }
+                    }
+             });
+         }
+         else
+         {
+             return false;
+         }
+     }
+</script>
+<div id="user_content"></div>
+<div id="first_pv">
+    @Html.Partial("partial_Blog_list", db.Blogs.Where(x => x.Author_id.Equals(User.UserId)).ToList())
+</div>

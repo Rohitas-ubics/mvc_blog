@@ -89,5 +89,12 @@ namespace Security.Controllers
         {
             return View();
         }
+        [AllowAnonymous]
+        public string get_all_tags()
+        {
+            var all_tags = db.Tag_master.ToList();
+            return all_tags.ToString();
+        }
+
     }
 }
