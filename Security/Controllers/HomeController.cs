@@ -3,6 +3,7 @@ using Security.DAL.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
@@ -90,11 +91,30 @@ namespace Security.Controllers
             return View();
         }
         [AllowAnonymous]
-        public string get_all_tags()
+        public JsonResult get_all_tags()
         {
-            var all_tags = db.Tag_master.ToList();
-            return all_tags.ToString();
-        }
+            List<Tag_master> all_tag_list = db.Tag_master.ToList();
+            StringBuilder json_str = new StringBuilder();
+            json_str.Append("[");
+            int list_lenth = all_tag_list.Count;   //logic to find second last item
+            int counter = 0;
+            foreach (Tag_master item in all_tag_list)
+            {                 
+                json_str.Append("{\"Tag_Name\":\"" + item.tag_name + "\" ,\" id \":\"" + item.id + "");
+                counter++;
+                if (counter != (list_lenth))
+                {
+                    json_str.Append("\"},");
+                }
+                else
+                {
+                    json_str.Append("\"}");  // for last element,... no comma
+                }
+            }
+            json_str.Append("]");
 
+            var abc = json_str;
+            return Json(json_str.ToString(),JsonRequestBehavior.AllowGet);
+        }
     }
 }
