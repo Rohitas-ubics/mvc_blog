@@ -60,7 +60,8 @@
     </script>
     <script type="text/javascript">
         function call_on_tag_click(tag_content) {
-            alert(tag_content+"some text");
+            $("#show_all_blogs").hide();
+            $("#fill_for_tag").load('../Home/All_blog_Partial?tag_content='+tag_content);
         };
     </script>
 </head>
@@ -77,6 +78,13 @@
             <hr>
 
        </div>
+    </div>
+    <div id="fill_for_tag"></div>
+    <div id="show_all_blogs">
+        @using Security
+        @model IEnumerable<Blog>
+        @{mvc_blog_dbEntities db = new mvc_blog_dbEntities();}         
+        @Html.Partial("All_blog_Partial", (db.Blogs.Where(i => i.is_active == true).ToList()))
     </div>
 </body>
 </html>

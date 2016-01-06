@@ -116,5 +116,21 @@ namespace Security.Controllers
             var abc = json_str;
             return Json(json_str.ToString(),JsonRequestBehavior.AllowGet);
         }
+        [AllowAnonymous]
+        public PartialViewResult All_blog_Partial(string tag_content)
+        {
+            Tag_master this_tm = db.Tag_master.Where(i => i.tag_name.Equals(tag_content)).FirstOrDefault();  //get id of tag
+            List<Blog_Tag> bt_list = db.Blog_Tag.Where(i => i.tag_id.Equals(this_tm.id)).ToList();   // get blog id from blog_tag
+
+            List<Blog> blog_list = new List<Blog>();
+
+            foreach (Blog_Tag item in bt_list)
+            {
+                Blog temp_bl = db.Blogs.Where(i=>i.Id.Equals(item.blog_id)).FirstOrDefault();
+                blog_list.Add(temp_bl);
+            }
+            var pops = blog_list;
+            return PartialView(blog_list.Where(i=>i.is_active == true).ToList());
+        }          
     }
 }

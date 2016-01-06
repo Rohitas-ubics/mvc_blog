@@ -86,6 +86,12 @@ namespace Security.Controllers
         }
 
         [AllowAnonymous]
+        public PartialViewResult All_blog_Partial()
+        {
+            return PartialView(db.Blogs.Where(i => i.is_active == true).ToList());
+        }
+
+        [AllowAnonymous]
         public ActionResult Details(Int32 id)
         {           
             return View(db.Blogs.Find(id));

@@ -1358,6 +1358,8 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\partial_Blog_list.cshtml" />
     <Content Include="Views\User\Blog_list.cshtml" />
+    <Content Include="Views\Account\All_blog_Partial.cshtml" />
+    <Content Include="Views\Home\All_blog_Partial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
